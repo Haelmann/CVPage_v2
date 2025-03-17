@@ -48,6 +48,7 @@ function showModal(message) {
 }
 
 function resetGame() {
+  console.log('game reset')
   cells.forEach(cell => cell.textContent = "");
   currentPlayer = "❌";
 }
@@ -62,7 +63,7 @@ function updateScore() {
   }
 }
 
-document.getElementById("reset-button").addEventListener("click", resetGame());
+document.getElementById("reset-button").addEventListener("click", resetGame);
 closeModal.addEventListener("click", () => { modal.style.display = "none"; resetGame() })
 /* TODO:
 Check winner

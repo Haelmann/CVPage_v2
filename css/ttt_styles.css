@@ -22,10 +22,13 @@ body {
   background-color: var(--mint);
   position: relative;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 header {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,17 +38,14 @@ header {
   border: 1px solid black;
   min-height: 10vh;
   min-width: 30vw;
-  left: 50%;
-  translate: -50%;
-  top: 20px;
+  width: 30vw;
   font-size: 2.5rem;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .field {
-  position: absolute;
-  top: calc(20px + 10vh + 30px + 30px + 5vh);
-  left: 50%;
-  translate: -50%;
+  position: relative;
   width: 400px;
   height: 400px;
   background-color: var(--alice-blue);
@@ -125,12 +125,10 @@ button {
 }
 
 .score {
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
-  left: 50%;
-  translate: -50%;
-  top: calc(20px + 10vh + 30px);
+  justify-content: center;
   background-color: white;
   background-color: var(--gunmetal);
   color: var(--peach-yellow);
@@ -138,6 +136,8 @@ button {
   border: 1px solid black;
   min-height: 6vh;
   min-width: 15vw;
+  margin-bottom: 50px;
+  font-size: 30px;
 }
 
 .modal-window {
