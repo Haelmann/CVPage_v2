@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root{
+--alice-blue: #EBF4FE;
+--rose: #fed7d7;
+--lemon: #fffbeb;
+--graphit: #637592; /* ff */
+--gunmetal: #202C39;
+--cadet-gray: #9FB1BC;
+--peach-yellow: #F2D492;
+--dark-spring-green: #1F734F;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    justify-self: center;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    padding: 10px;
+    background: var(--dark-spring-green);
+    width: 50vw;
+    }
+
+.header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 2px solid black;
+    border-bottom: none;
+    padding: 30px;
+    background-color: var(--gunmetal);
+    text-align: center;
+    display: flex;
+    gap: 5rem;
+    color: var(--peach-yellow);
+}
+
+.header h1 {
+    align-self: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Сделает фото круглым */
+    object-fit: cover; /* Обрезка, если фото нестандартное */
+}
+
+.topnav {
+    border: 2px solid black;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 1px solid black;
+    overflow: hidden;
+    background-color: var(--gunmetal);
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+.topnav a {
+    display: block;
+    float: left;
+    padding: 14px;
+    text-decoration: none;
+    color: var(--peach-yellow);
+    transition: 100ms all;
+}
+
+.topnav a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.paragraph{
+    display: block;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: var(--gunmetal);
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: var(--peach-yellow);
+    line-height: 2.5rem;
+    
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    .leftColumn, .rightColumn{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .topnav {
+        float: none;
+        width: 100%;
+    }
+}
