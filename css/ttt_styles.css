@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
+  /* animation: fieldShift 1s forwards; */
 }
 
 header {
@@ -54,6 +55,25 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  /* animation: fieldShift 1s forwards; */
+}
+
+@keyframes fieldShift {
+  0% {
+    opacity: 0;
+    left: -2000px;
+  }
+  35% {
+    opacity: 0;
+    left: -500px;
+  }
+  70% {
+    opacity: 1;
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 button {
@@ -103,9 +123,11 @@ button {
 
 @keyframes grow {
   from {
+    
     transform: scaleX(0) scaleY(0);
   }
   to {
+    
     transform: scaleX(1) scaleY(1);
   }
 }
@@ -124,6 +146,15 @@ button {
   transition: all 450ms;
 }
 
+#reset-button:active, #clearLocalScore:active{
+background-color: #1f734f;
+}
+
+.clearLocalScore{
+  position: relative;
+  margin-bottom: 10px;
+}
+
 .score {
   position: relative;
   display: flex;
@@ -136,7 +167,7 @@ button {
   border: 1px solid black;
   min-height: 6vh;
   min-width: 15vw;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   font-size: 30px;
 }
 
