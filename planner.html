@@ -7,17 +7,59 @@
     <title>Planner</title>
   </head>
   <body>
-    <header class="header"><h1>Planner (with localStorage)</h1></header>
+    <div class="blackscreen" id="blackscreen"></div>
+
+    <form class="modal-window-task-creation" id="modal-window-task-creation">
+      <input id="input-title" type="text" placeholder="Заголовок"/>
+      <input id="input-description" type="text" placeholder="Описание задачи" />
+      <div class="date-time-container">
+        <label for="date-time-start">From</label>
+        <input
+          type="datetime-local"
+          id="date-time-start"
+          value="2025-06-01T00:15"
+        />
+
+        <label for="date-time-finish">To</label>
+        <input
+          type="datetime-local"
+          id="date-time-finish"
+          value="2025-06-01T00:30"
+        />
+      </div>
+      <input
+        type="text"
+        name="location"
+        id="input-location"
+        placeholder="Место проведения"
+      />
+      <div class="button-container">
+        <button id="modal-window-save-button" class="button">Записать</button>
+        <button id="modal-window-cancel-button" class="button cancel-button">Отменить</button>
+      </div>
+    </form>
+
+    <header class="header"><h1>Планировщик</h1></header>
+    <button id="test-modal" style="z-index: 5;">test</button>
 
     <main>
+      <template id="task-template">
+        <div class="task-card">
+          <h3 class="task-title">Заголовок</h3>
+          <p class="task-description">Описание</p>
+          <p class="time-start">Время начала:</p>
+          <p class="time-finish">Время окончания:</p>
+          <p class="location">Локация:</p>
+          <button class="delete-task">Удалить задачу</button>
+        </div>
+      </template>
 
-      <div class="box">1</div>
-      <div class="box">2</div>
-      <div class="box">3</div>
-      <div class="box">4</div>
-      <div class="box">5</div>
-
+      <div class="task-container">
+        <div class="add-task-button-and-field">
+          <button id="add-task-button">Добавить задачу</button>
+        </div>
+      </div>
     </main>
-
+    <script src="planner.js"></script>
   </body>
 </html>

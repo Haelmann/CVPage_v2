@@ -41,7 +41,7 @@ header {
   min-width: 30vw;
   width: 30vw;
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 20px;
 }
 
@@ -81,6 +81,10 @@ button {
   font-size: 2rem;
   padding: 10px;
   border-radius: 15px;
+}
+
+.clearLocalScore {
+  margin-top: 10px;
 }
 
 .line {
@@ -183,6 +187,7 @@ background-color: #1f734f;
   justify-content: center;
   align-items: center;
 }
+
 .modal-content {
   background: white;
   padding: 20px;
