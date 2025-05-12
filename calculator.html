@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/calculator.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+
+    <header><h1>CALCULATOR</h1></header>
+
+    <div class="calculator-outer-layer">
+
+      <div class="display">
+          <input id="display-input" class="display-input" type="text" readonly>
+      </div>
+
+      <div class="buttons">
+
+        <button class="digit">7</button>
+        <button class="digit">8</button>
+        <button class="digit">9</button>
+        <button class="operation" id="sum">+</button>
+        <button style="grid-area: 1/5/3/6;" id="clear-button">c</button>
+        <button class="digit">4</button>
+        <button class="digit">5</button>
+        <button class="digit">6</button>
+        <button class="operation" id="minus">-</button>
+        <button class="digit">1</button>
+        <button class="digit">2</button>
+        <button class="digit">3</button>
+        <button class="operation" id="mult">*</button>
+        <button style="grid-area: 3/5/5/6;" id="equal-button">=</button>
+        <button style="grid-area: 4/2/5/3;" class="digit">0</button>
+        <button class="dot">.</button>
+        <button style="grid-area: 4/4/5/5;" class="operation" id="division">/</button>
+        
+      </div>
+
+    </div>
+
+    <div class="debug-window">
+      <p>memory_1 = <div id="mem1debugwindow"></div></p>
+      <p>operator = <div id="operatordebugwindow"></div></p>
+      <p>display = <div id="displaydebugwindow"></div></p>
+    </div>
+
+    <script src="/js/calculator.js"></script>
+  </body>
+
+</html>

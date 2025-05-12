@@ -10,8 +10,13 @@
     <div class="blackscreen" id="blackscreen"></div>
 
     <form class="modal-window-task-creation" id="modal-window-task-creation">
-      <input id="input-title" type="text" placeholder="Заголовок"/>
-      <input id="input-description" type="text" placeholder="Описание задачи" />
+      <input id="input-title" type="text" placeholder="Заголовок" required />
+      <input
+        id="input-description"
+        type="text"
+        placeholder="Описание задачи"
+        required
+      />
       <div class="date-time-container">
         <label for="date-time-start">From</label>
         <input
@@ -35,22 +40,36 @@
       />
       <div class="button-container">
         <button id="modal-window-save-button" class="button">Записать</button>
-        <button id="modal-window-cancel-button" class="button cancel-button">Отменить</button>
+        <button id="modal-window-cancel-button" class="button cancel-button">
+          Отменить
+        </button>
       </div>
     </form>
 
     <header class="header"><h1>Планировщик</h1></header>
-    <button id="test-modal" style="z-index: 5;">test</button>
+    <!-- <button id="test-modal" style="z-index: 5;">test</button> -->
 
     <main>
       <template id="task-template">
         <div class="task-card">
-          <h3 class="task-title">Заголовок</h3>
+          <div class="task-header">
+            <h3 class="task-title">Заголовок</h3>
+            <label class="task-completed">
+              <input type="checkbox" class="completed-checkbox" />
+              Выполнено
+            </label>
+          </div>
           <p class="task-description">Описание</p>
-          <p class="time-start">Время начала:</p>
-          <p class="time-finish">Время окончания:</p>
+          <div class="date-time-container">
+            <p class="time-start">Время начала:</p>
+            -
+            <p class="time-finish">Время окончания:</p>
+          </div>
           <p class="location">Локация:</p>
-          <button class="delete-task">Удалить задачу</button>
+          <div class="task-actions">
+            <button class="delete-task">Удалить задачу</button>
+            <button class="export-to-google">Экспорт в Google Calendar</button>
+          </div>
         </div>
       </template>
 
@@ -60,6 +79,7 @@
         </div>
       </div>
     </main>
-    <script src="planner.js"></script>
+
+    <script src="/js/planner.js"></script>
   </body>
 </html>
