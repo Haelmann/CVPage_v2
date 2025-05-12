@@ -19,7 +19,8 @@
 }
 
 body {
-  background-color: var(--mint);
+  background: url(/forest-2.jpg);
+  background-attachment: fixed;
   position: relative;
   font-family: "Roboto", sans-serif;
   display: flex;
