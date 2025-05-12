@@ -47,8 +47,8 @@
 
 
 .modal-window {
-  z-index: 10;
-  display: none;
+  z-index: -1;
+  display: flex;
   flex-direction: column;
   gap: var(--spacing);
   border: 2px solid var(--border-color);
@@ -62,10 +62,13 @@
   top: 40%;
   transform: translate(-50%, -50%);
   box-shadow: var(--shadow);
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .modal-window.visible {
-  display: flex;
+  opacity: 1;
+  z-index: 5;
 }
 
 .blackscreen.visible {
@@ -117,6 +120,7 @@ body {
 
 .topnav {
   display: flex;
+  width: 100%;
   border: 2px solid black;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -125,15 +129,20 @@ body {
   background-color: var(--gunmetal);
   color: white;
   font-size: 1.5rem;
+
 }
 
 .topnav a {
-  display: flex;
-  float: left;
+  display: inline-block;
   padding: 14px;
   text-decoration: none;
   color: var(--peach-yellow);
   transition: 100ms all;
+}
+
+.topnav a:last-child {
+  margin-left: auto;
+  color: white;
 }
 
 .topnav a:hover {
