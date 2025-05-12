@@ -44,9 +44,7 @@
   z-index: 5;
 }
 
-.blackscreen.visible {
-  display: block;
-}
+
 
 .modal-window {
   z-index: 10;
@@ -56,18 +54,31 @@
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 20px;
-  width: 90%;
+  width: 40vw;
   max-width: 500px;
   position: fixed;
   background-color:#f48d28;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   box-shadow: var(--shadow);
 }
 
 .modal-window.visible {
   display: flex;
+}
+
+.blackscreen.visible {
+  display: block;
+}
+
+.close-modal {
+  position: absolute;
+  right: 5%;
+}
+
+.close-modal:hover {
+  cursor: pointer;
 }
 
 body {
