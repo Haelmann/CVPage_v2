@@ -1,5 +1,5 @@
 :root {
-  --background-color: #f3f5f7;
+  --background-color: #ffd5a3;
   --font-color: #000;
 }
 
@@ -12,7 +12,8 @@
 body {
   font-family: Arial, sans-serif;
   min-height: 100vh;
-  background: var(--background-color);
+  background: url(/forest-2.jpg);
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +21,9 @@ body {
 }
 
 header {
-  width: 50%;
+  background-color: #202c39;
+  color:#f2d492;
+  width: 30vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,13 +32,25 @@ header {
   padding: 10px;
   margin: 40px;
   border-radius: 5px;
-  
   min-height: 40px;
   min-width: 400px;
 }
 
+button {
+  background-color: #202c39;
+  color:#f2d492;
+  border-radius: 10px;
+  transition-duration: 0.1s;
+}
+
+button:hover {
+  background-color: #455f7a;
+}
+
+
 .calculator-outer-layer {
-  width: 50vw;
+  background-color: #ffc684;
+  width: 30vw;
   height: 70vh;
   min-height: 400px;
   min-width: 400px;
@@ -47,12 +62,13 @@ header {
 }
 
 .buttons {
-
+background-color: #202c39;
+  color:#f2d492;
   display: grid;
   min-height: 40px;
   min-width: 40px;
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 15px;
   flex-grow: 1;
   margin: 10px;
   margin-left: 5%;
