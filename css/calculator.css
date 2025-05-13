@@ -103,10 +103,14 @@ button {
   left: 1px;
 }
 
-#clear-button{
+#clear-button, #equal-button{
   transition: 0.2s;
 }
 
 #clear-button:hover {
   background-color: rgb(255, 155, 155);
+}
+
+#equal-button:hover {
+  background-color: rgba(1, 167, 1, 0.404);
 }
