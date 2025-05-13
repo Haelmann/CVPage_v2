@@ -1,4 +1,4 @@
-const API_KEY = "a89b9820fa15ed7858683e09"; // Register at exchangerate-api.com to get your own key
+const API_KEY = "a89b9820fa15ed7858683e09";
 const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/latest/USD`;
 
 let rates = {}; // чтобы хранить курсы валют
@@ -63,6 +63,3 @@ document.getElementById("decimal-places").addEventListener("change", calculate);
 
 // Загружаем данные при старте
 fetchCurrencies();
-
-/* // Start when page loads
-document.addEventListener('DOMContentLoaded', fetchCurrencies); */
